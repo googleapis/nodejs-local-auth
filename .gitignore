@@ -1,0 +1,7 @@
+node_modules/
+docs/
+build/
+.vscode
+__pycache__
+.coverage
+package-lock.json

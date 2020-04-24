@@ -1,0 +1,17 @@
+{
+  "name": "local-auth-samples",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "mocha": "^7.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^0.1.0"
+  }
+}

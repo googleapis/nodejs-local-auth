@@ -1,0 +1,8 @@
+{
+  "name": "@google-cloud/local-auth",
+  "name_pretty": "Google Local Auth",
+  "release_level": "beta",
+  "language": "nodejs",
+  "repo": "googleapis/nodejs-local-auth",
+  "distribution_name": "@google-cloud/local-auth"
+}
