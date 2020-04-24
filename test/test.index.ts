@@ -70,15 +70,6 @@ describe('🔑 authenticate', () => {
     );
   });
 
-  it('should throw an error if no scopes are passed', async () => {
-    await assert.rejects(
-      nlaTypes.authenticate({
-        keyfilePath: 'boop',
-      } as nlaTypes.LocalAuthOptions),
-      /scopes must be set/
-    );
-  });
-
   it('should throw if the keyfile has no redirectUrl', async () => {
     const keyfilePath = path.join(
       __dirname,
