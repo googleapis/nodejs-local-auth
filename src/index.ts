@@ -19,6 +19,7 @@ import {OAuth2Client} from 'google-auth-library';
 import * as http from 'http';
 import {URL} from 'url';
 import * as opn from 'open';
+import arrify = require('arrify');
 import destroyer = require('server-destroy');
 
 const invalidRedirectUri = `The provided keyfile does not define a valid
@@ -33,7 +34,7 @@ your keyfile, and add a 'redirect_uris' section.  For example:
 
 export interface LocalAuthOptions {
   keyfilePath: string;
-  scopes: string[];
+  scopes: string[] | string;
 }
 
 // Open an http server to accept the oauth callback. In this
@@ -52,11 +53,7 @@ export async function authenticate(
     );
   }
 
-  if (!Array.isArray(options.scopes)) {
-    throw new Error('scopes must be set');
-  }
-
-  options.scopes = options.scopes || [];
+  options.scopes = arrify(options.scopes || []);
 
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const keyFile = require(options.keyfilePath);
