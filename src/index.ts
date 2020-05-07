@@ -62,15 +62,6 @@ export async function authenticate(
     throw new Error(invalidRedirectUri);
   }
   const redirectUri = keys.redirect_uris[keys.redirect_uris.length - 1];
-  const parts = new URL(redirectUri);
-  if (
-    redirectUri.length === 0 ||
-    parts.port !== '3000' ||
-    parts.hostname !== 'localhost' ||
-    parts.pathname !== '/oauth2callback'
-  ) {
-    throw new Error(invalidRedirectUri);
-  }
 
   // create an oAuth client to authorize the API call
   const client = new OAuth2Client({
