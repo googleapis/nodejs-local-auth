@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-local-auth.git",
-        "sha": "6669fad9af854c6ddfb9b3eee7f92394ffa5d733"
+        "sha": "aeb1f0761a55194a8842dd1e72de15b9db668d27"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "be74d3e532faa47eb59f1a0eaebde0860d1d8ab4"
+        "sha": "1c92077459db3dc50741e878f98b08c6261181e0"
       }
     }
   ]
