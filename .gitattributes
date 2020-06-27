@@ -1,4 +1,3 @@
 *.ts text eol=lf
 *.js test eol=lf
-.kokoro/* linguist-vendored
-*.js linguist-language=TypeScript
+protos/* linguist-generated
