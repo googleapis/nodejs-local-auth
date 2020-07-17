@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-local-auth.git",
-        "sha": "6963aa4e894d21ab12fc391a2ed0818702e09533"
+        "sha": "d7e6e54bf9649a9d9483d2641032358dbae2caf3"
       }
     },
     {
