@@ -14,6 +14,9 @@
 A standalone library for receiving Google OAuth tokens
 
 
+A comprehensive list of changes in each version may be found in
+[the CHANGELOG](https://github.com/googleapis/nodejs-local-auth/blob/master/CHANGELOG.md).
+
 
 
 * [github.com/googleapis/nodejs-local-auth](https://github.com/googleapis/nodejs-local-auth)
