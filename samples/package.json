@@ -12,6 +12,6 @@
     "mocha": "^8.0.0"
   },
   "dependencies": {
-    "@google-cloud/local-auth": "^1.0.0"
+    "@google-cloud/local-auth": "^1.0.1"
   }
 }
