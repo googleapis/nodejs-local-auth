@@ -31,14 +31,14 @@
     "google"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "author": "Google, LLC",
   "license": "Apache-2.0",
   "dependencies": {
     "arrify": "^2.0.1",
     "google-auth-library": "^7.0.0",
-    "open": "^7.0.3",
+    "open": "^8.0.2",
     "server-destroy": "^1.0.1"
   },
   "devDependencies": {
