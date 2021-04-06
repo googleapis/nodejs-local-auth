@@ -22,4 +22,4 @@ common_templates = gcp.CommonTemplates()
 templates = common_templates.node_library()
 s.copy(templates)
 
-node.postprocess_gapic_library_hermetic()
+node.fix_hermetic()
