@@ -36,7 +36,7 @@
   "author": "Google, LLC",
   "license": "Apache-2.0",
   "dependencies": {
-    "arrify": "^2.0.1",
+    "arrify": "^3.0.0",
     "google-auth-library": "^7.0.0",
     "open": "^7.0.3",
     "server-destroy": "^1.0.1"
