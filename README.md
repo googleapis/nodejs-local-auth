@@ -11,7 +11,7 @@
 
 
 
-A standalone library for receiving Google OAuth tokens
+This library is meant to demonstrate authentication for sample purposes; it should be treated as a starting point for building an application, and is not a general purpose solution. To explore authentication options, see our [authentication library for Node](https://github.com/googleapis/google-auth-library-nodejs).
 
 
 A comprehensive list of changes in each version may be found in
