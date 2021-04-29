@@ -2,7 +2,8 @@
 [//]: # "To regenerate it, use `python -m synthtool`."
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
-# [Google Local Auth: Node.js Samples](https://github.com/googleapis/nodejs-local-auth)
+<built-in method title of str object at 0x7fc227304290> Samples
+
 
 [![Open in Cloud Shell][shell_img]][shell_link]
 
@@ -31,7 +32,7 @@ Before running the samples, make sure you've followed the steps outlined in
 
 ### Quickstart
 
-View the [source code](https://github.com/googleapis/nodejs-local-auth/blob/master/samples/quickstart.js).
+View the [source code](https://github.com/googleapis/nodejs-local-auth/blob/main/samples/quickstart.js).
 
 [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-local-auth&page=editor&open_in_editor=samples/quickstart.js,samples/README.md)
 
