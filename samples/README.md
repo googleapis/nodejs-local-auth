@@ -2,7 +2,8 @@
 [//]: # "To regenerate it, use `python -m synthtool`."
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
-# [Google Local Auth: Node.js Samples](https://github.com/googleapis/nodejs-local-auth)
+<built-in method title of str object at 0x7fc227304290> Samples
+
 
 [![Open in Cloud Shell][shell_img]][shell_link]
 
