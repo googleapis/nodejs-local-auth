@@ -2,12 +2,11 @@
 [//]: # "To regenerate it, use `python -m synthtool`."
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
-<built-in method title of str object at 0x7fc227304290> Samples
-
+# [Google Local Auth: Node.js Samples](https://github.com/googleapis/nodejs-local-auth)
 
 [![Open in Cloud Shell][shell_img]][shell_link]
 
-
+This library is meant to demonstrate authentication for sample purposes; it should be treated as a starting point for building an application, and is not a general purpose solution. To explore authentication options, see our [authentication library for Node](https://github.com/googleapis/google-auth-library-nodejs).
 
 ## Table of Contents
 

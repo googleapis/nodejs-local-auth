@@ -2,8 +2,7 @@
 [//]: # "To regenerate it, use `python -m synthtool`."
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
-<built-in method title of str object at 0x7fc227304290>
-
+# [Google Local Auth: Node.js Client](https://github.com/googleapis/nodejs-local-auth)
 
 [![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
 [![npm version](https://img.shields.io/npm/v/@google-cloud/local-auth.svg)](https://www.npmjs.org/package/@google-cloud/local-auth)
@@ -12,7 +11,7 @@
 
 
 
-A standalone library for receiving Google OAuth tokens
+This library is meant to demonstrate authentication for sample purposes; it should be treated as a starting point for building an application, and is not a general purpose solution. To explore authentication options, see our [authentication library for Node](https://github.com/googleapis/google-auth-library-nodejs).
 
 
 A comprehensive list of changes in each version may be found in
