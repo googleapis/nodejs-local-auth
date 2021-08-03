@@ -17,7 +17,7 @@ This library is meant to demonstrate authentication for sample purposes; it shou
 A comprehensive list of changes in each version may be found in
 [the CHANGELOG](https://github.com/googleapis/nodejs-local-auth/blob/main/CHANGELOG.md).
 
-
+* [Google Local Auth Node.js Client API Reference][client-docs]
 
 * [github.com/googleapis/nodejs-local-auth](https://github.com/googleapis/nodejs-local-auth)
 
@@ -75,6 +75,9 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-local-auth/
 
 
 
+The [Google Local Auth Node.js Client API Reference][client-docs] documentation
+also contains samples.
+
 ## Supported Node.js Versions
 
 Our client libraries follow the [Node.js release schedule](https://nodejs.org/en/about/releases/).
@@ -130,7 +133,7 @@ Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-local-auth/blob/main/LICENSE)
 
-
+[client-docs]: https://cloud.google.com/nodejs/docs/reference/local-auth/latest
 
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
