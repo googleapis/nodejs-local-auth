@@ -4,7 +4,7 @@
 
 # [Google Local Auth: Node.js Client](https://github.com/googleapis/nodejs-local-auth)
 
-[![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
+
 [![npm version](https://img.shields.io/npm/v/@google-cloud/local-auth.svg)](https://www.npmjs.org/package/@google-cloud/local-auth)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-local-auth/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-local-auth)
 
@@ -103,13 +103,12 @@ This library follows [Semantic Versioning](http://semver.org/).
 
 
 
-This library is considered to be in **beta**. This means it is expected to be
-mostly stable while we work toward a general availability release; however,
-complete stability is not guaranteed. We will address issues and requests
-against beta libraries with a high priority.
 
 
 
+This library is considered to be in **preview**. This means it is still a
+work-in-progress and under active development. Any release is subject to
+backwards-incompatible changes at any time.
 
 
 More Information: [Google Cloud Platform Launch Stages][launch_stages]

@@ -1,8 +1,11 @@
 {
   "name": "@google-cloud/local-auth",
   "name_pretty": "Google Local Auth",
-  "release_level": "beta",
+  "release_level": "preview",
   "language": "nodejs",
   "repo": "googleapis/nodejs-local-auth",
-  "distribution_name": "@google-cloud/local-auth"
+  "distribution_name": "@google-cloud/local-auth",
+  "api_shortname": "@google-cloud/local-auth",
+  "client_documentation": "",
+  "library_type": "GAPIC_AUTO"
 }
