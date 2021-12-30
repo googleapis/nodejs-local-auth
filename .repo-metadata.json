@@ -6,6 +6,6 @@
   "repo": "googleapis/nodejs-local-auth",
   "distribution_name": "@google-cloud/local-auth",
   "api_shortname": "@google-cloud/local-auth",
-  "client_documentation": "",
-  "library_type": "GAPIC_AUTO"
+  "client_documentation": "https://github.com/googleapis/nodejs-local-auth",
+  "library_type": "OTHER"
 }
