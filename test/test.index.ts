@@ -102,7 +102,7 @@ describe('🔑 authenticate', () => {
     callbackUrl = 'http://localhost:3000/oauth2callback';
     await assert.rejects(
       nla.authenticate({keyfilePath, scopes: []}),
-      /Cannot read property/
+      /Cannot read/
     );
   });
 });
