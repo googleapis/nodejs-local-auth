@@ -21,6 +21,7 @@ import {URL} from 'url';
 import * as opn from 'open';
 import arrify = require('arrify');
 import destroyer = require('server-destroy');
+import {AddressInfo} from 'net';
 
 const invalidRedirectUri = `The provided keyfile does not define a valid
 redirect URI. There must be at least one redirect URI defined, and this sample
@@ -31,6 +32,10 @@ your keyfile, and add a 'redirect_uris' section.  For example:
   "http://localhost:3000/oauth2callback"
 ]
 `;
+
+function isAddressInfo(addr: string | AddressInfo | null): addr is AddressInfo {
+  return (addr as AddressInfo).port !== undefined;
+}
 
 export interface LocalAuthOptions {
   keyfilePath: string;
@@ -53,22 +58,14 @@ export async function authenticate(
     );
   }
 
-  options.scopes = arrify(options.scopes || []);
-
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const keyFile = require(options.keyfilePath);
   const keys = keyFile.installed || keyFile.web;
   if (!keys.redirect_uris || keys.redirect_uris.length === 0) {
     throw new Error(invalidRedirectUri);
   }
-  const redirectUri = keys.redirect_uris[keys.redirect_uris.length - 1];
-  const parts = new URL(redirectUri);
-  if (
-    redirectUri.length === 0 ||
-    parts.port !== '3000' ||
-    parts.hostname !== 'localhost' ||
-    parts.pathname !== '/oauth2callback'
-  ) {
+  const redirectUri = new URL(keys.redirect_uris[0] ?? 'http://localhost');
+  if (redirectUri.hostname !== 'localhost') {
     throw new Error(invalidRedirectUri);
   }
 
@@ -76,35 +73,66 @@ export async function authenticate(
   const client = new OAuth2Client({
     clientId: keys.client_id,
     clientSecret: keys.client_secret,
-    redirectUri,
-  });
-  // grab the url that will be used for authorization
-  const authorizeUrl = client.generateAuthUrl({
-    access_type: 'offline',
-    scope: options.scopes.join(' '),
   });
 
   return new Promise((resolve, reject) => {
-    const server = http
-      .createServer(async (req, res) => {
-        try {
-          if (req.url!.indexOf('/oauth2callback') > -1) {
-            const qs = new URL(req.url!, 'http://localhost:3000').searchParams;
-            res.end('Authentication successful! Please return to the console.');
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (server as any).destroy();
-            const {tokens} = await client.getToken(qs.get('code')!);
-            client.credentials = tokens;
-            resolve(client);
-          }
-        } catch (e) {
-          reject(e);
+    const server = http.createServer(async (req, res) => {
+      try {
+        const url = new URL(req.url!, 'http://localhost:3000');
+        if (url.pathname !== redirectUri.pathname) {
+          res.end('Invalid callback URL');
+          return;
         }
-      })
-      .listen(3000, () => {
-        // open the browser to the authorize url to start the workflow
-        opn(authorizeUrl, {wait: false}).then(cp => cp.unref());
+        const searchParams = url.searchParams;
+        if (searchParams.has('error')) {
+          res.end('Authorization rejected.');
+          reject(new Error(searchParams.get('error')!));
+          return;
+        }
+        if (!searchParams.has('code')) {
+          res.end('No authentication code provided.');
+          reject(new Error('Cannot read authentication code.'));
+          return;
+        }
+
+        const code = searchParams.get('code');
+        const {tokens} = await client.getToken({
+          code: code!,
+          redirect_uri: redirectUri.toString(),
+        });
+        client.credentials = tokens;
+        resolve(client);
+        res.end('Authentication successful! Please return to the console.');
+      } catch (e) {
+        reject(e);
+      } finally {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (server as any).destroy();
+      }
+    });
+
+    let listenPort = 3000;
+    if (keyFile.installed) {
+      // Use emphemeral port if not a web client
+      listenPort = 0;
+    } else if (redirectUri.port !== '') {
+      listenPort = Number(redirectUri.port);
+    }
+
+    server.listen(listenPort, () => {
+      const address = server.address();
+      if (isAddressInfo(address)) {
+        redirectUri.port = String(address.port);
+      }
+      const scopes = arrify(options.scopes || []);
+      // open the browser to the authorize url to start the workflow
+      const authorizeUrl = client.generateAuthUrl({
+        redirect_uri: redirectUri.toString(),
+        access_type: 'offline',
+        scope: scopes.join(' '),
       });
+      opn(authorizeUrl, {wait: false}).then(cp => cp.unref());
+    });
     destroyer(server);
   });
 }
