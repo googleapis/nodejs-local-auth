@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/googleapis/nodejs-local-auth/compare/v1.0.1...v2.0.0) (2022-05-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* update library to use Node 12 (#142)
+
+### Build System
+
+* update library to use Node 12 ([#142](https://github.com/googleapis/nodejs-local-auth/issues/142)) ([6ffeb5d](https://github.com/googleapis/nodejs-local-auth/commit/6ffeb5defec93024e52962df29f5d2a2fc155325))
+
 ### [1.0.1](https://www.github.com/googleapis/nodejs-local-auth/compare/v1.0.0...v1.0.1) (2021-02-09)
 
 
