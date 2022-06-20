@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/googleapis/nodejs-local-auth/compare/v2.0.0...v2.1.0) (2022-06-20)
+
+
+### Features
+
+* Relax expectations around redirect URL and port to better support installed app client IDs and use ephemeral ports when possible ([#141](https://github.com/googleapis/nodejs-local-auth/issues/141)) ([5948e33](https://github.com/googleapis/nodejs-local-auth/commit/5948e333bae2deb4b27f2c2c6bd8160ba0efd014))
+
 ## [2.0.0](https://github.com/googleapis/nodejs-local-auth/compare/v1.0.1...v2.0.0) (2022-05-17)
 
 
