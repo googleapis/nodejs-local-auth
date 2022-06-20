@@ -84,20 +84,6 @@ describe('🔑 authenticate', () => {
     );
   });
 
-  it('should throw if the keyfile has an invalid redirectUrl', async () => {
-    const keyfilePath = path.join(
-      __dirname,
-      '../../test/fixtures/keys-invalid-redirect.json'
-    );
-    await assert.rejects(
-      nlaTypes.authenticate({
-        keyfilePath: keyfilePath,
-        scopes: [],
-      }),
-      /The provided keyfile does not define/
-    );
-  });
-
   it('should surface errors if the server returns an error', async () => {
     callbackUrl = 'http://localhost:3000/oauth2callback';
     await assert.rejects(
