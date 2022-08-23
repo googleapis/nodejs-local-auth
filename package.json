@@ -1,6 +1,6 @@
 {
   "name": "@google-cloud/local-auth",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A standalone library for receiving Google OAuth tokens",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",

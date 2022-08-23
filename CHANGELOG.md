@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/googleapis/nodejs-local-auth/compare/v2.1.0...v2.1.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* remove pip install statements ([#1546](https://github.com/googleapis/nodejs-local-auth/issues/1546)) ([#147](https://github.com/googleapis/nodejs-local-auth/issues/147)) ([86f77ed](https://github.com/googleapis/nodejs-local-auth/commit/86f77ed455452579ee8bbb47122d010bdb76d63d))
+
 ## [2.1.0](https://github.com/googleapis/nodejs-local-auth/compare/v2.0.0...v2.1.0) (2022-06-20)
 
 
