@@ -113,7 +113,7 @@ export async function authenticate(
 
     let listenPort = 3000;
     if (keyFile.installed) {
-      // Use emphemeral port if not a web client
+      // Use ephemeral port if not a web client
       listenPort = 0;
     } else if (redirectUri.port !== '') {
       listenPort = Number(redirectUri.port);
