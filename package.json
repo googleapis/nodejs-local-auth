@@ -37,7 +37,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "arrify": "^2.0.1",
-    "google-auth-library": "^8.0.2",
+    "google-auth-library": "^9.0.0",
     "open": "^7.0.3",
     "server-destroy": "^1.0.1"
   },
