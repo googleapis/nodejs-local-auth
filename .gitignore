@@ -6,3 +6,4 @@ __pycache__
 .coverage
 package-lock.json
 google-cloud-local-auth-*
+.DS_Store
