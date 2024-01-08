@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/googleapis/nodejs-local-auth/compare/v3.0.0...v3.0.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* Resolve path to keys ([#185](https://github.com/googleapis/nodejs-local-auth/issues/185)) ([c6c2fc6](https://github.com/googleapis/nodejs-local-auth/commit/c6c2fc6bce4395c3ed2cf0b8594d6a1e0e8c70f4))
+
 ## [3.0.0](https://github.com/googleapis/nodejs-local-auth/compare/v2.1.1...v3.0.0) (2023-08-10)
 
 
