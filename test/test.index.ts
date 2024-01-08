@@ -91,4 +91,24 @@ describe('🔑 authenticate', () => {
       /Cannot read/
     );
   });
+
+  it('should return credentials for a relative keyfilePath', async () => {
+    const access_token = 'fake-access-token';
+    const refresh_token = 'fake-refresh-token';
+    const scope = nock('https://oauth2.googleapis.com')
+      .post('/token')
+      .reply(200, {
+        access_token,
+        refresh_token,
+      });
+    const keyfilePath = 'test/fixtures/keys.json';
+
+    const client = await nla.authenticate({
+      keyfilePath: keyfilePath,
+      scopes: [],
+    });
+    scope.done();
+    assert.strictEqual(client.credentials.access_token, access_token);
+    assert.strictEqual(client.credentials.refresh_token, refresh_token);
+  });
 });
