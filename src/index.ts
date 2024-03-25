@@ -22,6 +22,7 @@ import * as opn from 'open';
 import arrify = require('arrify');
 import destroyer = require('server-destroy');
 import {AddressInfo} from 'net';
+import {resolve} from 'path';
 
 const invalidRedirectUri = `The provided keyfile does not define a valid
 redirect URI. There must be at least one redirect URI defined, and this sample
@@ -59,7 +60,7 @@ export async function authenticate(
   }
 
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const keyFile = require(options.keyfilePath);
+  const keyFile = require(resolve(options.keyfilePath));
   const keys = keyFile.installed || keyFile.web;
   if (!keys.redirect_uris || keys.redirect_uris.length === 0) {
     throw new Error(invalidRedirectUri);

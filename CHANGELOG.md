@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.1](https://github.com/googleapis/nodejs-local-auth/compare/v3.0.0...v3.0.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* Resolve path to keys ([#185](https://github.com/googleapis/nodejs-local-auth/issues/185)) ([c6c2fc6](https://github.com/googleapis/nodejs-local-auth/commit/c6c2fc6bce4395c3ed2cf0b8594d6a1e0e8c70f4))
+
+## [3.0.0](https://github.com/googleapis/nodejs-local-auth/compare/v2.1.1...v3.0.0) (2023-08-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to Node 14 ([#169](https://github.com/googleapis/nodejs-local-auth/issues/169))
+
+### Miscellaneous Chores
+
+* Upgrade to Node 14 ([#169](https://github.com/googleapis/nodejs-local-auth/issues/169)) ([4ebd6ac](https://github.com/googleapis/nodejs-local-auth/commit/4ebd6acb98627ba7f8e60c021dfdf70c24a408c6))
+
 ## [2.1.1](https://github.com/googleapis/nodejs-local-auth/compare/v2.1.0...v2.1.1) (2022-08-23)
 
 
