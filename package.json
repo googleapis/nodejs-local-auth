@@ -42,7 +42,7 @@
     "server-destroy": "^1.0.1"
   },
   "devDependencies": {
-    "@compodoc/compodoc": "1.1.19",
+    "@compodoc/compodoc": "1.1.25",
     "@microsoft/api-documenter": "^7.8.10",
     "@microsoft/api-extractor": "^7.8.10",
     "@types/mocha": "^9.0.0",
