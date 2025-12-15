@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/googleapis/nodejs-local-auth/compare/v3.0.1...v3.0.2) (2025-12-15)
+
+
+### Bug Fixes
+
+* Typo ([#157](https://github.com/googleapis/nodejs-local-auth/issues/157)) ([59c66fa](https://github.com/googleapis/nodejs-local-auth/commit/59c66fad2f571e0b5aa3fd45c4cdba0d698173e8))
+
 ## [3.0.1](https://github.com/googleapis/nodejs-local-auth/compare/v3.0.0...v3.0.1) (2024-01-08)
 
 
