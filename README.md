@@ -1,5 +1,7 @@
 [//]: # "This README.md file is auto-generated, all changes to this file will be lost."
 [//]: # "To regenerate it, use `python -m synthtool`."
+**_THIS PACKAGE IS DEPRECATED. PLEASE USE [OFFICIAL AUTH LIBRARY](https://www.npmjs.com/package/google-auth-library) AND MOCK IT, [EXAMPLE](https://github.com/googleapis/google-api-nodejs-client/pull/3849)_**
+
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
 # [Google Local Auth: Node.js Client](https://github.com/googleapis/nodejs-local-auth)
